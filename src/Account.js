@@ -20,10 +20,10 @@ const Account = () => {
         Account Information
       </Typography>
       <Typography variant="body1" align="center">
-        Email: {email || 'darryn@randrtechsa.com'} {/* Display user email or 'N/A' if not available */}
+        Email: {email || 'darryn@randrtechsa.com'} 
       </Typography>
       <Typography variant="body1" align="center">
-        Password: {password || 'P@55w0rd@1'} {/* Display user password or 'N/A' if not available */}
+        Password: {password || 'P@55w0rd@1'} 
       </Typography>
     </div>
   );

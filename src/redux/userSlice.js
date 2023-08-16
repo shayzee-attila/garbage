@@ -2,10 +2,10 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const userSlice = createSlice({
   name: 'user',
-  initialState: { email: '', password: ''}, // Initial state should be an empty object
+  initialState: { email: '', password: ''}, 
   reducers: {
     login: (state, action) => {
-      return { ...action.payload }; // This action sets the user data in the state
+      return { ...action.payload }; 
     },
   },
 });

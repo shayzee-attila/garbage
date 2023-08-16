@@ -28,12 +28,12 @@ const Login = () => {
 
     setLoading(true);
 
-    // Simulate validation
-    if (email === 'shayzee.attila@gmail.com' && password === 'Ksdksd7@') {
-      // Simulate API call delay
+    // Validation
+    if (email === 'darryn@randrtechsa.com' && password === 'P@55w0rd@1') {
+      
       await new Promise((resolve) => setTimeout(resolve, 2000));
 
-      // Dispatch user data to Redux store
+      // User data to Redux store
       dispatch({ type: 'LOGIN', payload: { email, password } });
 
       // Navigate to Home page

@@ -7,7 +7,7 @@ const Home = () => {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'center', // Center content vertically
+    justifyContent: 'center', 
     height: '100vh',
   };
 

@@ -12,8 +12,11 @@ ReactDOM.render(
   <Provider store={store}>
     <Router>
       <Routes>
+        {/* Always show the login page */}
         <Route path="/" element={<Login />} />
+        {/* Show Home only if authenticated */}
         <Route path="/home" element={<Home />} />
+        {/* Show Account only if authenticated */}
         <Route path="/account" element={<Account />} />
         <Route path="/unauthorized" element={<Unauthorized />} />
         <Route path="*" element={<Navigate to="/unauthorized" />} />
@@ -22,3 +25,4 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
+
