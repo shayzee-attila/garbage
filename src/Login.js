@@ -47,7 +47,7 @@ const Login = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      {/* Display "Login:" text */}
+      {/* Display "Login:" */}
       <Typography variant="h4" align="center" gutterBottom>
         Login:
       </Typography>
