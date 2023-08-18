@@ -1,10 +1,10 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import Typography from '@mui/material/Typography';
+import { Navigate } from 'react-router-dom';
+import { useUser } from './UserContext';
 
 const Account = () => {
-  // Get user data from Redux store
-  const { email, password } = useSelector((state) => state.user);
+  const { userDetails, isLoggedIn } = useUser();
 
   const accountContainerStyle = {
     display: 'flex',
@@ -14,20 +14,27 @@ const Account = () => {
     height: '100vh',
   };
 
+  if (!isLoggedIn) {
+    return <Navigate to="/unauthorized" />;
+  }
+
   return (
     <div style={accountContainerStyle}>
       <Typography variant="h4" align="center">
         Account Information
       </Typography>
-      <Typography variant="body1" align="center">
-        Email: {email || 'darryn@randrtechsa.com'} 
-      </Typography>
-      <Typography variant="body1" align="center">
-        Password: {password || 'P@55w0rd@1'} 
-      </Typography>
+      {userDetails && (
+        <div>
+          <Typography variant="body1" align="center">
+            Email: {userDetails.email}
+          </Typography>
+          <Typography variant="body1" align="center">
+            Password: {userDetails.password}
+          </Typography>
+        </div>
+      )}
     </div>
   );
 };
 
 export default Account;
-
