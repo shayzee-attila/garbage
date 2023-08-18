@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState } from "react";
 
 const UserContext = createContext();
 
@@ -11,7 +11,9 @@ export const UserProvider = ({ children }) => {
   const [isLoggedIn, setLoggedIn] = useState(false); // New isLoggedIn state
 
   return (
-    <UserContext.Provider value={{ userDetails, setUserDetails, isLoggedIn, setLoggedIn }}>
+    <UserContext.Provider
+      value={{ userDetails, setUserDetails, isLoggedIn, setLoggedIn }}
+    >
       {children}
     </UserContext.Provider>
   );
